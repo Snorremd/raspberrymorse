@@ -42,31 +42,31 @@ public class MorsePi {
 
 		// Make alphabet to morsecode dictionary:
 		characterConversions = new HashMap<>(40);
-		characterConversions.put("a", makeBooleanList(new Boolean[]{false, true}));
-		characterConversions.put("b", makeBooleanList(new Boolean[]{true, false, false, false}));
-		characterConversions.put("c", makeBooleanList(new Boolean[]{true, false, true, false}));
-		characterConversions.put("d", makeBooleanList(new Boolean[]{true, false, false}));
-		characterConversions.put("e", makeBooleanList(new Boolean[]{false}));
-		characterConversions.put("f", makeBooleanList(new Boolean[]{false, false, true, false}));
-		characterConversions.put("g", makeBooleanList(new Boolean[]{true, true, false}));
-		characterConversions.put("h", makeBooleanList(new Boolean[]{false, false, false, false}));
-		characterConversions.put("i", makeBooleanList(new Boolean[]{false, false}));
-		characterConversions.put("j", makeBooleanList(new Boolean[]{false, true, true, true}));
-		characterConversions.put("k", makeBooleanList(new Boolean[]{true, false, true}));
-		characterConversions.put("l", makeBooleanList(new Boolean[]{false, true, false, false}));
-		characterConversions.put("m", makeBooleanList(new Boolean[]{true, true}));
-		characterConversions.put("n", makeBooleanList(new Boolean[]{true, false}));
-		characterConversions.put("o", makeBooleanList(new Boolean[]{true, true, true}));
-		characterConversions.put("p", makeBooleanList(new Boolean[]{false, true, true, false}));
-		characterConversions.put("q", makeBooleanList(new Boolean[]{true, true, false, true}));
-		characterConversions.put("h", makeBooleanList(new Boolean[]{false, true, false}));
-		characterConversions.put("s", makeBooleanList(new Boolean[]{false, false, false}));
-		characterConversions.put("t", makeBooleanList(new Boolean[]{true}));
-		characterConversions.put("u", makeBooleanList(new Boolean[]{false, false, true}));
-		characterConversions.put("v", makeBooleanList(new Boolean[]{false, false, false, true}));
-		characterConversions.put("x", makeBooleanList(new Boolean[]{true, false, false, true}));
-		characterConversions.put("y", makeBooleanList(new Boolean[]{true, false, true, true}));
-		characterConversions.put("z", makeBooleanList(new Boolean[]{true, true, false, false}));
+		characterConversions.put("a", Arrays.asList(false, true});
+		characterConversions.put("b", Arrays.asList(true, false, false, false);
+		characterConversions.put("c", Arrays.asList(true, false, true, false));
+       	        characterConversions.put("d", Arrays.asList(true, false, false));
+                characterConversions.put("e", Arrays.asList(false));
+                characterConversions.put("f", Arrays.asList(false, false, true, false));
+                characterConversions.put("g", Arrays.asList(true, true, false));
+                characterConversions.put("h", Arrays.asList(false, false, false, false));
+                characterConversions.put("i", Arrays.asList(false, false));
+                characterConversions.put("j", Arrays.asList(false, true, true, true));
+                characterConversions.put("k", Arrays.asList(true, false, true));
+                characterConversions.put("l", Arrays.asList(false, true, false, false));
+                characterConversions.put("m", Arrays.asList(true, true));
+                characterConversions.put("n", Arrays.asList(true, false));
+                characterConversions.put("o", Arrays.asList(true, true, true));
+                characterConversions.put("p", Arrays.asList(false, true, true, false));
+                characterConversions.put("q", Arrays.asList(true, true, false, true));
+                characterConversions.put("h", Arrays.asList(false, true, false));
+                characterConversions.put("s", Arrays.asList(false, false, false));
+                characterConversions.put("t", Arrays.asList(true));
+                characterConversions.put("u", Arrays.asList(false, false, true));
+                characterConversions.put("v", Arrays.asList(false, false, false, true));
+                characterConversions.put("x", Arrays.asList(true, false, false, true));
+                characterConversions.put("y", Arrays.asList(true, false, true, true));
+                characterConversions.put("z", Arrays.asList(true, true, false, false));
 
 		// For each word in input string
 		for(String word : words) {
@@ -92,10 +92,6 @@ public class MorsePi {
 		String[] words = args[0].split(" ");
 		new MorsePi(words);
 
-	}
-
-	public LinkedList<Boolean> makeBooleanList(Boolean[] booleans) {
-		return new LinkedList<Boolean>(Arrays.asList(booleans));
 	}
 
 	public void morse(String word) throws InterruptedException {
