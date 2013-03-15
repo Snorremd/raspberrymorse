@@ -99,7 +99,7 @@ public class MorsePi {
 		char letters[] = word.toCharArray();
 		for(char letter : letters) {
 			// Get the morse code if it exist
-			LinkedList<Boolean> morseCode = characterConversions.get(Character.toString(letter));
+			List<Boolean> morseCode = characterConversions.get(Character.toString(letter));
 			if(morseCode != null) {
 				// Let there be light (short or long)
 				for(boolean morse : morseCode) {
